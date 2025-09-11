@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  
+  body {
+      margin: 0;
+      padding: 20px;
+      background: url('fond.gif') no-repeat center center fixed;
+      background-size: cover; /* couvre toute la page */
+      color: white; /* couleur texte pour contraste */
+      font-family: Arial, sans-serif;
+      position: relative;
+      min-height: 100vh;
+    }
+  body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    /* Ton contenu doit être au-dessus */
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  
   <meta charset="UTF-8" />
   <title>CV </title>
   <style>
@@ -12,34 +40,35 @@
 </head>
 <body>
 
-  <h1>Julien Tari</h1>
-  <p>Etudient</p>
+  <div class="content">
+    <h1>Julien Tari</h1>
+    <p>Etudient</p>
 
-  <h2>CV</h2>
-  <p><a href="cv.pdf" target="_blank">Télécharger mon CV (PDF)</a></p>
+    <h2>CV</h2>
+    <p><a href="cv.pdf" target="_blank">Télécharger mon CV (PDF)</a></p>
 
-  <h2>Mon parcours</h2>
-  <p>2020/2021 : CPES <br />
-  2021/2022 : CPGE PCSI <br />
-  2022/2023 : CPGE PC <br />
-  2023/2024 : L3 Maths général <br />
-  2024/2025 : M1 MANU <br />
-  2025/2026 : M2 MANU</p>
+    <h2>Mon parcours</h2>
+    <p>2020/2021 : CPES <br />
+    2021/2022 : CPGE PCSI <br />
+    2022/2023 : CPGE PC <br />
+    2023/2024 : L3 Maths général <br />
+    2024/2025 : M1 MANU <br />
+    2025/2026 : M2 MANU</p>
 
-  <h2>Exemples de code</h2>
-  <pre><code>
-// Exemple simple de code JavaScript
-function hello() {
-  console.log("Bonjour !");
-}
-hello();
-  </code></pre>
+    <h2>Exemples de code</h2>
+    <pre><code>
+  // Exemple simple de code JavaScript
+  function hello() {
+    console.log("Bonjour !");
+  }
+  hello();
+    </code></pre>
 
-  <h2>Mes projets GitHub</h2>
-  <ul>
-    <li><a href="https://github.com/tonnomutilisateur/projet1" target="_blank">Projet 1</a></li>
-    <li><a href="https://github.com/tonnomutilisateur/projet2" target="_blank">Projet 2</a></li>
-  </ul>
+    <h2>Mes projets GitHub</h2>
+    <ul>
+      <li><a href="https://github.com/tonnomutilisateur/projet1" target="_blank">Projet 1</a></li>
+      <li><a href="https://github.com/tonnomutilisateur/projet2" target="_blank">Projet 2</a></li>
+    </ul>
 
 </body>
 </html>
